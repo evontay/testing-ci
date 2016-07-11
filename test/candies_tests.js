@@ -93,22 +93,17 @@ describe('POST /candies', () => {
         'name': 'bertie botts every flavor beans',
         'color': 'vomit'
       })
-      .end((error, response) => {
-        // expect(response.body[response.body.length - 1].color).to.equal('red')
-
-        expect(422)
-        done()
-      })
+      .expect(422, done)
   })
 
-  it('should return an error message if the color field is wrong', (done) => {
-    api.get('/candies')
-      .set('Accept', 'application/json')
-      .end((error, response) => {
-        expect(response.body.message).to.eql('Color is wrong!!')
-        done()
-      })
-  })
+  // it('should return an error message if the color field is wrong', (done) => {
+  //   api.get('/candies')
+  //     .set('Accept', 'application/json')
+  //     .end((error, response) => {
+  //       expect(response.body.message).to.eql('Color is wrong!!')
+  //       done()
+  //     })
+  // })
 })
 
 describe('PUT /candies/:id', () => {

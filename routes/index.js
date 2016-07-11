@@ -17,7 +17,6 @@ router.use((req, res, next) => {
   next()
 })
 
-
 router.use((req, res, next) => {
   res.header('Access-Control-Allow-Origin', '*')
   res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept')
@@ -59,6 +58,7 @@ router.post('/candies/', (req, res) => {
     // router.get('/candies/', (req, res) => {
     //   res.status(422);
     })
+    return
   }
 
   // return the result
