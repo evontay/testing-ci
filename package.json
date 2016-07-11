@@ -5,7 +5,11 @@
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
-    "test": "mocha"
+    "dev": "nodemon app.js",
+    "test": "mocha",
+  },
+  "engines": {
+    "node": "6.2.2"
   },
   "dependencies": {
     "body-parser": "^1.15.2",
